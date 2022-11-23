@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Task5_ProstieCisla {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter some number: ");
+        System.out.print("Enter some number more then one: ");
         int arrLength = sc.nextInt();
         sc.close();
         int[] primeNumbers = new int[arrLength];
