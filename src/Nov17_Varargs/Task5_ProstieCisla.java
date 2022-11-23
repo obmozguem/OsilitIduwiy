@@ -18,17 +18,15 @@ public class Task5_ProstieCisla {
         sc.close();
         int[] primeNumbers = new int[arrLength];
         int index = 0;
+        int num = 2;
         while (primeNumbers[arrLength - 1] == 0) {
             boolean isPrime = true;
-            int num = 2;
-            int verification = 2;
-            while (verification < num) {
-                if (num % verification == 0) {
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
                     isPrime = false;
                     num++;
                     break;
                 }
-                verification++;
             }
             if (isPrime) {
                 primeNumbers[index] = num;
