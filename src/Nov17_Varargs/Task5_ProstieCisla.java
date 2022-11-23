@@ -7,16 +7,49 @@ package Nov17_Varargs;
 
 Нахождение простых чисел и вычисление суммы реализовать, используя рекурсивные методы.*/
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Task5_ProstieCisla {
     public static void main(String[] args) {
-        int[] primeNumbers = new int[10];
-        for(int i=0; i<primeNumbers.length;i++)
-            while(i<primeNumbers.length){
-                int j=2;
-                if(j%)
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter some number: ");
+        int arrLength = sc.nextInt();
+        sc.close();
+        int[] primeNumbers = new int[arrLength];
+        int index = 0;
+        while (primeNumbers[arrLength - 1] == 0) {
+            boolean isPrime = true;
+            int num = 2;
+            int verification = 2;
+            while (verification < num) {
+                if (num % verification == 0) {
+                    isPrime = false;
+                    num++;
+                    break;
+                }
+                verification++;
             }
-
+            if (isPrime) {
+                primeNumbers[index] = num;
+                index++;
+                num++;
+            }
+        }
+        System.out.println(Arrays.toString(primeNumbers));
     }
-
-
 }
+        /*for (int i = 2; i <= 100; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(i);
+            }
+        }
+    }*/
+
