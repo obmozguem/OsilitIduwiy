@@ -7,6 +7,8 @@ package Nov23_Incapsulation;
 Холодная вода: 23
 */
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Counters count1 = new Counters("Газ", "метр кубический", 20);
@@ -15,8 +17,9 @@ public class Main {
         Counters count4 = new Counters("Electricity", "киловатт", 50);
         Counters[] array = {count1, count2, count3, count4};
         ShowInfo(array);
-        CounterService cs = new CounterService();
-        cs.searchByName("Газ", array);
+        //CounterService cs = new CounterService();
+        //Counters coun = cs.searchByName("апр", array);
+        //System.out.println(coun);
     }
 
     private static void ShowInfo(Counters... array) {

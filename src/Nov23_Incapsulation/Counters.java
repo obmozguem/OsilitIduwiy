@@ -72,4 +72,13 @@ public class Counters {
         this.unit = unit;
         this.counter = value;
     }
+
+    @Override
+    public String toString() {
+        return "Counters{" +
+                "name='" + name + '\'' +
+                ", unit='" + unit + '\'' +
+                ", counter=" + counter +
+                '}';
+    }
 }
