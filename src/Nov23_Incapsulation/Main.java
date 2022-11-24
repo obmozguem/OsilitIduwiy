@@ -15,6 +15,8 @@ public class Main {
         Counters count4 = new Counters("Electricity", "киловатт", 50);
         Counters[] array = new Counters[4];
         ShowInfo(array);
+        CounterService cs = new CounterService();
+
     }
 
     private static void ShowInfo(Counters... array) {
