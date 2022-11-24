@@ -46,37 +46,30 @@ public class Counter {
 }
 */
 
-public class Counter {
-    public String name;
-    public int counter;
+public class Counters {
+    private final String name;
+    private final String unit;
+    private int counter;
 
-    public Counter(String name) {
-        this(name, 0);
+    public String getName() {
+        return name;
     }
 
-    public Counter(String name, int counter) {
+    public String getUnit() {
+        return unit;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
         this.counter = counter;
+    }
+
+    public Counters(String name, String unit, int value) {
         this.name = name;
+        this.unit = unit;
+        this.counter = value;
     }
-
-    public int increase(int value) {
-        counter += value;
-
-        return counter;
-    }
-
-    public int decrease(int value) {
-        counter -= value;
-
-        return counter;
-    }
-
-    public int increment() {
-        return ++counter;
-    }
-
-    public int decrement() {
-        return --counter;
-    }
-
 }
