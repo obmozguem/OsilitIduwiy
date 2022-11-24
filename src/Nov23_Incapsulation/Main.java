@@ -13,10 +13,10 @@ public class Main {
         Counters count2 = new Counters("Холодная вода", "метр кубический", 15);
         Counters count3 = new Counters("Горячая вода", "метр кубический", 5);
         Counters count4 = new Counters("Electricity", "киловатт", 50);
-        Counters[] array = new Counters[4];
+        Counters[] array = {count1, count2, count3, count4};
         ShowInfo(array);
         CounterService cs = new CounterService();
-
+        cs.searchByName("Газ", array);
     }
 
     private static void ShowInfo(Counters... array) {

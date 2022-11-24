@@ -24,7 +24,7 @@ public class CounterService {
         count.setCounter(0);
     }
 
-    public static Counters searchByName(String st, Counters... array) {
+    public Counters searchByName(String st, Counters... array) {
         for (Counters counters : array) {
             if (counters.getName().equals(st)) {
                 return counters;
