@@ -23,5 +23,14 @@ public class CounterService {
     public void zeroing(Counters count) {
         count.setCounter(0);
     }
+
+    public Counters SerchByName(String st, Counters... array) {
+        for (Counters counters : array) {
+            if (counters.getName().equals(st)) {
+                return counters;
+                break;
+            }
+        }
+        return ??!!!!! :((((
+    }
 }
-// ОСТАЛОСЬ ПО НАЗВАНИЮ!
