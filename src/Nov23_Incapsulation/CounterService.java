@@ -28,9 +28,8 @@ public class CounterService {
         for (Counters counters : array) {
             if (counters.getName().equals(st)) {
                 return counters;
-                break;
             }
         }
-        return ??!!!!! :((((
+        return null;
     }
 }

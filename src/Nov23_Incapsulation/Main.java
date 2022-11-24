@@ -8,12 +8,17 @@ package Nov23_Incapsulation;
 */
 
 public class Main {
-    Counters count1 = new Counters("Газ", "метр кубический", 20);
-    Counters count2 = new Counters("Холодная вода", "метр кубический", 15);
-    Counters count3 = new Counters("Горячая вода", "метр кубический", 5);
-    Counters count4 = new Counters("Electricity", "киловатт", 50);
-    private void ShowInfo (Counters ... array){
+    public static void main(String[] args) {
+        Counters count1 = new Counters("Газ", "метр кубический", 20);
+        Counters count2 = new Counters("Холодная вода", "метр кубический", 15);
+        Counters count3 = new Counters("Горячая вода", "метр кубический", 5);
+        Counters count4 = new Counters("Electricity", "киловатт", 50);
+        Counters[] array = new Counters[4];
+        ShowInfo(array);
+    }
+
+    private static void ShowInfo(Counters... array) {
         for (Counters counters : array)
-        System.out.println(counters.getName() + ": " + counters.getCounter());
+            System.out.println(counters.getName() + ": " + counters.getCounter());
     }
 }
