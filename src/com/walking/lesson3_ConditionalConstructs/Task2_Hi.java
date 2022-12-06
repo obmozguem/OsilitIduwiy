@@ -21,6 +21,8 @@ public class Task2_Hi {
             case "Bye":
                 System.out.println("Good Bye");
                 break;
+            case "How are you":
+                System.out.println("How are your doing");
             default:
                 System.out.println("Unknown message");
         }
