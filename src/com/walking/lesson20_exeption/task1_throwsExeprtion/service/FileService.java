@@ -1,7 +1,7 @@
-package com.walking.lesson20_exeption.task1_catchExeption.service;
+package com.walking.lesson20_exeption.task1_throwsExeprtion.service;
+import com.walking.lesson20_exeption.task1_throwsExeprtion.model.File;
 
 import java.io.FileNotFoundException;
-import com.walking.lesson20_exeption.task1_catchExeption.model.File;
 
 public class FileService {
    /* private final File[] files;

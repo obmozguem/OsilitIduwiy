@@ -14,6 +14,7 @@ import com.walking.lesson20_exeption.task1_catchExeption.model.MediaType;
 import com.walking.lesson20_exeption.task1_catchExeption.model.File;
 import com.walking.lesson20_exeption.task1_catchExeption.service.FileService;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
@@ -22,9 +23,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a file name: ");
         String fileName = sc.nextLine();
-        File [] allFiles = initFiles();
-fileService.findFile(fileName, allFiles);
+        sc.close();
+        try {
+            File[] allFiles = initFiles();
+            File foundFile = fileService.findFile(fileName, allFiles);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not exists");
         }
+    }
+
     private static File[] initFiles() {
         File file1 = new File("1.txt", 1234, MediaType.TEXT);
         File file2 = new File("2.txt", 34567, MediaType.TEXT);
