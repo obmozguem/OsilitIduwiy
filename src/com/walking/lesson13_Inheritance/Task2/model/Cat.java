@@ -9,8 +9,7 @@ public class Cat extends Animal {
         super(CAT_CLASS_NAME, "meow");
     }
 
-    @Override
-    public void sound() {
-        System.out.println("meow");
+    public void meow() {
+        sound();
     }
 }

@@ -7,8 +7,7 @@ public class Cow extends Animal {
         super(COW_CLASS_NAME, "moo");
     }
 
-    @Override
-    public void sound() {
-        System.out.println("moo");
+    public void moo() {
+        sound();
     }
 }
