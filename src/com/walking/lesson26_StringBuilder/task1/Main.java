@@ -18,7 +18,8 @@ public class Main {
         printRectangle(horizontalLine, verticalLines);
     }
     static void printRectangle(StringBuilder horizontalLine, StringBuilder verticalLines) {
-        System.out.print(horizontalLine.append(verticalLines).append(horizontalLine));
+        StringBuilder resctangle = new StringBuilder();
+        System.out.print(resctangle.append(horizontalLine).append(verticalLines).append(horizontalLine));
     }
 
     static StringBuilder createHorizontalLine(int length) {
