@@ -31,6 +31,8 @@ public class Main {
         }
     }
 private static void sounds (Animal animal){
+        //if (animal instanceof Cat) {
+    //    ((Cat) animal).meow();   - Другой вариант написания.
         if (animal instanceof Cat cat){
             cat.sound();
         }

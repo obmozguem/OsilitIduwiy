@@ -15,22 +15,41 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter words: ");
         String st = sc.nextLine();
-        String array[] = st.strip().toLowerCase().split(" ");
-        System.out.println(Arrays.toString(array));
+        String words[] = st.strip().toLowerCase().split(" ");
+        /*System.out.println(Arrays.toString(words));
         int counter = 1;
         String controlWord;
         StringBuilder sb = new StringBuilder();
         OUTER:
-        for (int i = 1; i < array.length; i++) {
-            controlWord = array[i];
+        for (int i = 1; i < words.length; i++) {
+            controlWord = words[i];
             INNER:
             for (int j = 0; j < i; j++) {
-                if (controlWord.equals(array[j])) {
+                if (controlWord.equals(words[j])) {
                     continue OUTER;
                 }
             }
             counter++;
+        }*/
+        int counter = 0;
+        for (int i = 0; i < words.length; i++) {
+            // Каждое слово в массиве сравниваем с предыдущими словами того же массива.
+            // Если слово эквивалентно одному из предыдущих - оно не уникально
+            int j = 0;
+            boolean isUnique = true;
+            while (j < i && isUnique) {
+                if (words[i].equals(words[j])) {
+                    isUnique = false;
+                } else {
+                    j++;
+                }
+            }
+
+            if (isUnique) {
+                counter++;
+            }
         }
+
         System.out.printf("Found %d unique words\n", counter);
     }
 }
