@@ -4,20 +4,21 @@ package com.walking.lesson28_generics_part1.task2;
 
 public class Main {
     public static void main(String[] args) {
-        Generic <String> gen = new Generic<>(null);
+        Generic<String> gen = new Generic<>(null);
         boolean b = gen.isNull();
         showAnswer(b);
     }
-    public static void showAnswer (boolean b){
-        if (b){
+
+    public static void showAnswer(boolean b) {
+        if (b) {
             System.out.println("Object is null");
-        }
-        else {
+        } else {
             System.out.println("Object is not null");
         }
     }
 }
-class  Generic <T> {
+
+class Generic<T> {
     private T field;
 
     public Generic(T field) {
@@ -31,12 +32,12 @@ class  Generic <T> {
     public void setField(T field) {
         this.field = field;
     }
-public boolean isNull (){
-    if (field.equals(null)){
-        throw new NullPointerException("Object is null");
+
+    public boolean isNull() {
+        if (field.equals(null)) {
+            throw new NullPointerException("Object is null");
+        } else {
+            return false;
+        }
     }
-    else{
-        return false;
-    }
-}
 }
