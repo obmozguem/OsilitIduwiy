@@ -34,7 +34,7 @@ class Generic<T> {
     }
 
     public boolean isNull() {
-        if (field.equals(null)) {
+        if (field==null) {
             throw new NullPointerException("Object is null");
         } else {
             return false;

@@ -30,7 +30,7 @@ class Generic<T> {
         return value;
     }
 
-    public <T> T searchElement() {
+    public T searchElement() {
         for (int i = 0; i < array.length; i++) {
             if (value.equals(array[i])) {
                 return (T) value;
