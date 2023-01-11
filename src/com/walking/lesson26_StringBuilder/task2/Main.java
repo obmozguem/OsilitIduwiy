@@ -15,6 +15,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter words: ");
         String st = sc.nextLine();
+        sc.close();
         String words[] = st.strip().toLowerCase().split(" ");
         /*System.out.println(Arrays.toString(words));
         int counter = 1;
