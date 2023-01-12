@@ -1,4 +1,4 @@
-package com.walking.lesson31;
+package com.walking.lesson31_Input_Output;
 
 /* Класс PrintStream - это именно тот класс, который используется для вывода на консоль. Когда мы выводим на консоль
 некоторую информацию с помощью вызова System.out.println(), то тем самым мы задействует PrintStream, так как переменная

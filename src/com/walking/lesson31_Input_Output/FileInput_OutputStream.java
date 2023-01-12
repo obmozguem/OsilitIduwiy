@@ -1,4 +1,4 @@
-package com.walking.lesson31;
+package com.walking.lesson31_Input_Output;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

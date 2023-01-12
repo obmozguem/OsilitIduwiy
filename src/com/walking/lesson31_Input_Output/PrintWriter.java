@@ -1,6 +1,4 @@
-package com.walking.lesson31;
-import java.io.*;
-import java.util.Scanner;
+package com.walking.lesson31_Input_Output;
 
 /* На PrintStream похож другой класс PrintWriter. Его можно использовать как для вывода информации на консоль, так и в
  файл или любой другой поток вывода.
