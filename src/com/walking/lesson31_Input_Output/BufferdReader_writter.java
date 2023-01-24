@@ -22,8 +22,6 @@ public class BufferdReader_writter {
             writer.write(line);
             writer.write('\n'); }
              */
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
         }

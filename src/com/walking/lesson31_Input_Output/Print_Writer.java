@@ -6,7 +6,9 @@ package com.walking.lesson31_Input_Output;
  Пример вывода данным классом на консоль:
  */
 
-public class PrintWriter {
+import java.io.PrintWriter;
+
+public class Print_Writer {
     public static void main(String[] args) {
         try(PrintWriter pw = new PrintWriter(System.out))
         {

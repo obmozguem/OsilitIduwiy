@@ -7,13 +7,13 @@ out в классе System как раз и представляет объек�
 
 import java.io.*;
 
-public class PrintStream {
+public class Print_Stream {
     public static void main(String[] args) {
 
         // ЗАПИСЬ В ФАЙЛ
 
         String text = "Привет мир!"; // строка для записи
-        try (FileOutputStream fos = new FileOutputStream("C://SomeDir//notes3.txt");
+        try (FileOutputStream fos = new FileOutputStream("./notes3.txt");
              PrintStream printStream = new PrintStream(fos)) {
             printStream.println(text);
             System.out.println("Запись в файл произведена");

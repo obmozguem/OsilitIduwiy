@@ -17,7 +17,7 @@ import java.util.Scanner;
  некорректном использовании допустимых, должно быть выброшено исключение.
  */
 public class Main {
-    public static final String WORDS_REGEX = "[a-z-\\s]+";
+    public static final String WORDS_REGEX = "[a-z-\s]+";
     public static final String WORD_REGEX = "[a-z][a-z-]+[a-z]";
     public static final String SIMPLE_WORD_REGEX = "[a-z]+";
 
@@ -27,7 +27,7 @@ public class Main {
         String words = sc.nextLine().trim().toLowerCase();
         sc.close();
         validateWords(words);
-        String[] wordsArray = words.split("\\s+");
+        String[] wordsArray = words.split("\s+");
         int counter = countUniqueWords(wordsArray);
         System.out.printf("Found %d unique wors \n", counter);
         /*  String[] array = "asdj--dvf-df---dff--d-ffv-fgdf-kp".split("-");
@@ -70,7 +70,7 @@ public class Main {
             } else {
                 String[] subString = word.split("-");
                 for (int i = 0; i < subString.length; i++) {
-                    if (subString[i] == "") {
+                    if (subString[i].equals("")) {
                         throw new RuntimeException("Invalid input. Should not be more than one \"-\" in a row");
                     }
                 }
