@@ -5,7 +5,7 @@ package com.walking.lesson38_Comparator_Compabarle.task2;
  и году (если номера почему-то совпали).
 Также реализуйте сортировку коллекции машин в прямом и обратном порядке.*/
 
-import com.walking.lesson38_Comparator_Compabarle.task1.model.Car;
+import com.walking.lesson38_Comparator_Compabarle.task2.model.Car;
 
 import java.util.ArrayList;
 import java.util.Comparator;
